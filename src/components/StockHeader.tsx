@@ -21,11 +21,6 @@ const StockHeader = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img src={logo} alt="logo" className="w-8 h-8" />
-            <div className="flex items-center gap-2 cursor-pointer">
-              <span className="text-lg font-bold tracking-tight text-foreground">
-                Titan<span className="text-primary">Index</span>
-              </span>
-            </div>
           </div>
 
           {/* Desktop Navigation */}
