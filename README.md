@@ -1,73 +1,41 @@
-# Welcome to your Lovable project
+RiskRadar
 
-## Project info
+An AI-powered browser extension to detect malicious links and executable files in real-time.
+Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This browser extension uses artificial intelligence to evaluate the risk of links and executable files. It provides users with a risk percentage to indicate how dangerous a link or file might be.
 
-## How can I edit this code?
+Features:
 
-There are several ways of editing your application.
+    Real-time risk assessment: Hover over a link on desktop to see its risk percentage.
+    Mobile-friendly: Tap once to view the risk percentage, tap again to access the link.
+    Executable file detection: Checks downloaded executable files for potential malware.
+    User-friendly interface: Easy and clear visualization of risks without interrupting browsing.
 
-**Use Lovable**
+How It Works
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+    The extension sends the URL or file metadata to an AI model.
+    The AI model analyzes it based on trained features (e.g., URL structure, file signatures, known malware patterns).
+    The extension displays a risk percentage:
+        Green (0–30%): Safe
+        Yellow (31–70%): Caution
+        Red (71–100%): High risk
 
-Changes made via Lovable will be committed automatically to this repo.
+Mobile Behavior:
+Since hovering is not available on mobile devices, clicking a link shows its risk percentage. Clicking a second time allows access to the link if the user chooses to proceed.
+Installation
 
-**Use your preferred IDE**
+    Clone or download this repository.
+    Load the extension in your browser (Chrome/Edge/Firefox) as an unpacked extension.
+    Enjoy safe browsing with AI-powered risk detection!
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Credits
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This project is developed by the Axiom Researcher Team.
 
-Follow these steps:
+Team Members:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+    CoderSilicon ( Leader )
+    DeveloperDevankit ( Co-Partner )
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+We thank all contributors and dataset providers for making this project possible.
