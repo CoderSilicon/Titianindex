@@ -158,7 +158,7 @@ const Index = () => {
                 </h2>
               </div>
 
-              <div className="prose prose-sm prose-invert max-w-none space-y-4">
+              <div className="prose prose-sm max-w-none space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
                   The Indian equity markets opened on a positive note today, with the Nifty 50 index 
                   climbing above the 24,800 mark for the first time in three weeks. Strong buying interest 
