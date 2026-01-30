@@ -33,7 +33,7 @@ const PortfolioWidget = ({
         </div>
 
         <div className="text-center py-6 bg-muted/30 rounded-xl border border-border">
-          <p className="text-3xl font-bold font-mono-numbers text-foreground">
+          <p className="text-3xl font-bold font-sans text-foreground">
             ₹24,86,432<span className="text-primary">.18</span>
           </p>
           <p className="text-xs text-muted-foreground mt-2 font-mono uppercase tracking-wider">

@@ -22,7 +22,7 @@ const SuspiciousLink = ({
   return (
     <a
       href="#"
-      className="text-primary hover:text-primary/80 underline underline-offset-2 decoration-primary/40 hover:decoration-primary/80 transition-colors"
+      className="text-blue-700 hover:text-primary/80 underline underline-offset-2 decoration-primary/40 hover:decoration-primary/80 transition-colors"
       onClick={(e) => e.preventDefault()}
       onMouseEnter={() => {
         setPopupData(threatData);

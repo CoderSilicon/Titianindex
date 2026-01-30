@@ -23,34 +23,34 @@ const MarketOverview = () => {
       
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {MARKET_DATA.map((m, i) => (
-          <div
+            <div
             key={i}
-            className="stock-card p-4 cursor-pointer group"
-          >
+            className="stock-card p-2 cursor-pointer group"
+            >
             <div className="flex items-start justify-between mb-2">
               <div>
-                <p className="text-xs text-muted-foreground font-medium">
-                  {m.subLabel}
-                </p>
-                <p className="text-sm font-semibold text-foreground">
-                  {m.label}
-                </p>
+              <p className="text-xs text-muted-foreground font-medium mb-1">
+                {m.subLabel}
+              </p>
+              <p className="text-sm font-semibold text-foreground">
+                {m.label}
+              </p>
               </div>
-              <div className={`p-1.5 rounded-md ${m.up ? 'bg-stock-up/10' : 'bg-stock-down/10'}`}>
-                {m.up ? (
-                  <TrendingUp className="w-4 h-4 text-stock-up" />
-                ) : (
-                  <TrendingDown className="w-4 h-4 text-stock-down" />
-                )}
+              <div className={`p-1 rounded-md ${m.up ? 'bg-stock-up/10' : 'bg-stock-down/10'}`}>
+              {m.up ? (
+                <TrendingUp className="w-4 h-4 text-stock-up" />
+              ) : (
+                <TrendingDown className="w-4 h-4 text-stock-down" />
+              )}
               </div>
             </div>
-            <p className="text-xl font-bold font-mono-numbers text-foreground">
+            <p className="text-xl font-bold font-sans text-foreground mt-2 ml-0.5">
               {m.val}
             </p>
-            <p className={`text-sm font-semibold font-mono-numbers mt-1 ${m.up ? 'text-stock-up' : 'text-stock-down'}`}>
+            <p className={`text-sm font-semibold font-sans ${m.up ? 'text-stock-up' : 'text-stock-down'}`}>
               {m.chg}
             </p>
-          </div>
+            </div>
         ))}
       </div>
     </section>

@@ -10,16 +10,20 @@ interface Stock {
   change: string;
   up: boolean;
   volume: string;
+  image: string;
   threatType?: 'danger' | 'warning' | 'safe';
+  width?: number; // Optional width in pixels
+  height?: number; // Optional height in pixels
 }
 
 const STOCKS: Stock[] = [
-  { symbol: "NVDA", name: "NVIDIA Corp", price: "$148.25", change: "+4.2%", up: true, volume: "52.3M", threatType: 'danger' },
-  { symbol: "SMCI", name: "Super Micro", price: "$920.44", change: "+12.5%", up: true, volume: "18.7M", threatType: 'warning' },
-  { symbol: "TSLA", name: "Tesla Inc", price: "$274.22", change: "-0.8%", up: false, volume: "98.2M", threatType: 'safe' },
-  { symbol: "AAPL", name: "Apple Inc", price: "$192.10", change: "+0.4%", up: true, volume: "45.1M" },
-  { symbol: "MSFT", name: "Microsoft", price: "$425.22", change: "+0.9%", up: true, volume: "22.8M", threatType: 'danger' },
-  { symbol: "AMZN", name: "Amazon", price: "$180.12", change: "-0.3%", up: false, volume: "38.4M" },
+  { symbol: "NVDA", name: "NVIDIA Corp", price: "$148.25", change: "+4.2%", up: true, volume: "52.3M", threatType: 'danger', image: "https://www.nvidia.com/favicon.ico", width: 24, height: 24 },
+  { symbol: "INTC", name: "Intel Corp", price: "$50.00", change: "+1.5%", up: true, volume: "20.0M", threatType: 'warning', image: "https://www.intel.com/favicon.ico", width: 32, height: 16 },
+  { symbol: "GOOGL", name: "Alphabet Inc", price: "$2,850.00", change: "+1.2%", up: true, volume: "1.5M", threatType: 'safe', image: "https://www.google.com/favicon.ico", width: 24, height: 24 },
+  { symbol: "TSLA", name: "Tesla Inc", price: "$274.22", change: "-0.8%", up: false, volume: "98.2M", threatType: 'safe', image: "https://www.tesla.com/favicon.ico", width: 24, height: 24 },
+  { symbol: "AAPL", name: "Apple Inc", price: "$192.10", change: "+0.4%", up: true, volume: "45.1M", image: "https://www.apple.com/favicon.ico", width: 20, height: 24 },
+  { symbol: "MSFT", name: "Microsoft", price: "$425.22", change: "+0.9%", up: true, volume: "22.8M", threatType: 'danger', image: "https://www.microsoft.com/favicon.ico", width: 24, height: 24 },
+  { symbol: "AMZN", name: "Amazon", price: "$180.12", change: "-0.3%", up: false, volume: "38.4M", image: "https://www.amazon.com/favicon.ico", width: 28, height: 20 },
 ];
 
 interface TrendingStocksProps {
@@ -45,7 +49,7 @@ const TrendingStocks = ({
   };
 
   return (
-    <div className="stock-card p-5">
+    <div className=" p-5">
       <div className="flex items-center gap-2 mb-4">
         <Flame className="w-5 h-5 text-destructive" />
         <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide">
@@ -55,7 +59,9 @@ const TrendingStocks = ({
 
       <div className="space-y-3">
         {STOCKS.map((stock) => (
-          <div key={stock.symbol} className="flex items-center justify-between">
+          <div key={stock.symbol} className="flex items-center justify-between">   
+          <div className="flex justify-center items-center">
+                <img src={stock.image} alt={stock.name} className="mx-4" width={stock.width} height={stock.height} />
           <SuspiciousLink
             key={stock.symbol}
             text={stock.symbol}
@@ -66,10 +72,8 @@ const TrendingStocks = ({
             setPopupData={setPopupData}
           >
           </SuspiciousLink>
-          
-            <div className="flex-1 ml-3">
-              <p className="text-sm font-medium text-foreground">{stock.name}</p>
-            </div>
+
+          </div> 
             <div className="text-right">
               <p className="text-sm font-mono-numbers text-foreground">{stock.price}</p>
               <p
