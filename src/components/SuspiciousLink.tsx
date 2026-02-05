@@ -21,7 +21,7 @@ const SuspiciousLink = ({
 }: SuspiciousLinkProps) => {
   return (
     <a
-      href="#"
+      href="chrome-extension://cieoahmfojhpohmmkboafacmdebbjilc/pages/warning.html" 
       className="text-blue-700 hover:text-primary/80 underline underline-offset-2 decoration-primary/40 hover:decoration-primary/80 transition-colors"
       onClick={(e) => e.preventDefault()}
       onMouseEnter={() => {
